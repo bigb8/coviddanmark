@@ -1,0 +1,85 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    
+      <meta charset="utf-8">
+      <title>i respirator DK</title>
+      
+      
+        
+          
+        
+        
+          
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.0.0.min.js" integrity="sha384-5Y+xuMRAbgBj/2WKUiL8yzV4fBFic1HJPo2hT3pq2IsEzbsJjj8kT2i0b1lZ7C2N" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
+        
+      
+      
+    
+  </head>
+  
+  
+  <body>
+    
+      
+        
+          
+          
+            
+              <div class="bk-root" id="fdf3d101-d752-4824-89df-c3bffd1195f3" data-root-id="1280"></div>
+            
+          
+        
+      
+      
+        <script type="application/json" id="1380">
+          {"3f5530cb-f3fe-4406-b743-be2a3798f20b":{"roots":{"references":[{"attributes":{"background_fill_color":"#fafafa","below":[{"id":"1291"}],"center":[{"id":"1294"},{"id":"1298"}],"left":[{"id":"1295"}],"renderers":[{"id":"1303"}],"title":{"id":"1281"},"toolbar":{"id":"1299"},"x_range":{"id":"1283"},"x_scale":{"id":"1287"},"y_range":{"id":"1307"},"y_scale":{"id":"1289"}},"id":"1280","subtype":"Figure","type":"Plot"},{"attributes":{"axis":{"id":"1295"},"dimension":1,"ticker":null},"id":"1298","type":"Grid"},{"attributes":{"text":"Antal i respirator - COVID19"},"id":"1281","type":"Title"},{"attributes":{"axis_label":"Antal","formatter":{"id":"1309"},"ticker":{"id":"1296"}},"id":"1295","type":"LinearAxis"},{"attributes":{},"id":"1309","type":"BasicTickFormatter"},{"attributes":{"interval":7,"num_minor_ticks":7},"id":"1305","type":"SingleIntervalTicker"},{"attributes":{},"id":"1312","type":"Selection"},{"attributes":{"source":{"id":"1300"}},"id":"1304","type":"CDSView"},{"attributes":{},"id":"1287","type":"LinearScale"},{"attributes":{},"id":"1311","type":"BasicTickFormatter"},{"attributes":{"axis_label":"Dato","formatter":{"id":"1311"},"major_label_overrides":{"70":"10.3","77":"17.3","84":"23.3","91":"30.3"},"ticker":{"id":"1305"}},"id":"1291","type":"LinearAxis"},{"attributes":{"data":{"left":{"__ndarray__":"MzMzMzNzUUAzMzMzM7NRQDMzMzMzM1JAMzMzMzOzUkAzMzMzM/NSQDMzMzMzM1NAMzMzMzNzU0A=","dtype":"float64","shape":[7]},"right":{"__ndarray__":"zczMzMyMUUDNzMzMzMxRQM3MzMzMTFJAzczMzMzMUkDNzMzMzAxTQM3MzMzMTFNAzczMzMyMU0A=","dtype":"float64","shape":[7]},"top":[-1,-1,-1,-1,-1,4,18]},"selected":{"id":"1312"},"selection_policy":{"id":"1313"}},"id":"1300","type":"ColumnDataSource"},{"attributes":{"bottom":{"value":0},"fill_color":{"value":"#E84A5F"},"left":{"field":"left"},"line_color":{"value":"white"},"right":{"field":"right"},"top":{"field":"top"}},"id":"1301","type":"Quad"},{"attributes":{},"id":"1296","type":"BasicTicker"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_multi":null,"active_scroll":"auto","active_tap":"auto"},"id":"1299","type":"Toolbar"},{"attributes":{"axis":{"id":"1291"},"ticker":null},"id":"1294","type":"Grid"},{"attributes":{},"id":"1289","type":"LinearScale"},{"attributes":{},"id":"1283","type":"DataRange1d"},{"attributes":{},"id":"1313","type":"UnionRenderers"},{"attributes":{"bottom":{"value":0},"fill_alpha":{"value":0.1},"fill_color":{"value":"#E84A5F"},"left":{"field":"left"},"line_alpha":{"value":0.1},"line_color":{"value":"white"},"right":{"field":"right"},"top":{"field":"top"}},"id":"1302","type":"Quad"},{"attributes":{"data_source":{"id":"1300"},"glyph":{"id":"1301"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"1302"},"selection_glyph":null,"view":{"id":"1304"}},"id":"1303","type":"GlyphRenderer"},{"attributes":{"end":154},"id":"1307","type":"Range1d"}],"root_ids":["1280"]},"title":"Bokeh Application","version":"2.0.0"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            var fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  var docs_json = document.getElementById('1380').textContent;
+                  var render_items = [{"docid":"3f5530cb-f3fe-4406-b743-be2a3798f20b","root_ids":["1280"],"roots":{"1280":"fdf3d101-d752-4824-89df-c3bffd1195f3"}}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    var attempts = 0;
+                    var timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        clearInterval(timer);
+                        embed_document(root);
+                      } else {
+                        attempts++;
+                        if (attempts > 100) {
+                          clearInterval(timer);
+                          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                        }
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    
+  </body>
+  
+</html>
