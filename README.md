@@ -43,5 +43,7 @@ Nedenstående regressioner repræsenterer kun eksisterende data, fremskrivning (
 Pas på jer selv og andre !
 
 Med venlig hilsen,
+
 Morten Bo Søndergaard Svendsen
+
 Civilingeniør, Ph.d.
