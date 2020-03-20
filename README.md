@@ -1,3 +1,6 @@
+<img src ="https://www.sst.dk/-/media/Viden/Smitsomme-sygdomme/Smitsomme-sygdomme-A-%C3%85/Bannere/Banner-forebyg-smitte.ashx?h=600&la=da&w=1000&hash=17A4B48D7D1979E43C2402C88A34C08B7FB1F2A2"/>
+
+
 # Grafer og data COVID19 Danmark
 
 
