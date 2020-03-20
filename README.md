@@ -4,7 +4,7 @@
 20.03.2020:
 Udover den dystre situation i Danmark, så blev jeg frusteret over at man ikke kunne få et grafisk overblik over COVID-19 situationen i Danmark. Jeg var nødt til at surfe rundt for at få overblik. Jeg samler data fra SST hver dag og opdaterer graferne.
 
-Alt data, kode og og grafer, er udgivet under MIT licens. Så du kan frit benytte det. Forslag til ændringer, og hjælp modtages gerne.  
+Alt data, kode og og grafer, er udgivet under MIT licens. Så du kan frit benytte det. Find det ved at væ.ge "View the Project on GitHub". Forslag til ændringer, og hjælp modtages gerne.  
 
 
 <a href = "https://bigb8.github.io/coviddanmark/lib/stacked.html" target="_blank">Oversigt</a>
@@ -17,15 +17,12 @@ Regressionerne repræsenterer kun eksisterende data, fremskrivning på basis af 
 
 
 
+<iframe src ="https://bigb8.github.io/coviddanmark/lib/stacked.html" height="650" width="600"></iframe>
 
 
+<iframe src ="https://bigb8.github.io/coviddanmark/lib/resp.html" height="650" width="600"></iframe>
 
-<iframe src ="https://bigb8.github.io/coviddanmark/lib/stacked.html" height="650" width="800"></iframe>
-
-
-<iframe src ="https://bigb8.github.io/coviddanmark/lib/resp.html" height="650" width="800"></iframe>
-
-<iframe src ="https://bigb8.github.io/coviddanmark/lib/hosp.html" height="650" width="800"></iframe>
+<iframe src ="https://bigb8.github.io/coviddanmark/lib/hosp.html" height="650" width="600"></iframe>
 
 
 
