@@ -41,8 +41,12 @@ def sigmoid(x, L ,x0, k, b):
     y = L / (1 + np.exp(-k*(x-x0)))+b
     return (y)
 
-def expfunc(x, a, b, c):
+def expfunc_old(x, a, b, c):
     return a * np.exp(-b * x) + c
+
+def expfunc(x, x0, k, b):
+    y = np.exp(-k*(x-x0))+b
+    return (y)
 
 
 numbers = {"ita":ita,"hosp": hosp,"resp":resp,"deaths":deaths}
@@ -127,13 +131,18 @@ xdata = (yearday - yearday[0]) + .1
 ydata = hosp
 
 p0 = [max(ydata), np.median(xdata),1,min(ydata)] # this is an mandatory initial guess
-popt, pcov = curve_fit(sigmoid, xdata, ydata,p0, method='dogbox')
-poptexp, pcovexp = curve_fit(expfunc, xdata, ydata,method='dogbox')
+popt, pcov = curve_fit(sigmoid, xdata[:-1], ydata[:-1],p0, method='dogbox')
+print("SIGM SUCCES",popt,pcov)
+try:
+    poptexp, pcovexp = curve_fit(expfunc, xdata[:-1], ydata[:-1],p0=[1,1,1],method='dogbox', maxfev=5000)
+    print("EXP SUCCES",poptexp,pcovexp)
+except RuntimeError:
+    poptexp = popt[2:]
 
-print(popt,pcov)
 
-fakex = np.linspace(0,np.max(xdata) - xdata[0],150) #week 1. 16.3.2020.
-fakex_forward = np.linspace(np.max(xdata) - xdata[0],np.max(xdata) - xdata[0] + 3,50) #Fremskriver seneste situation med 3 dage
+
+fakex = np.linspace(0,np.max(xdata) - xdata[0] - 1,150) #week 1. 16.3.2020.
+fakex_forward = np.linspace(np.max(xdata) - xdata[0] -1,np.max(xdata) - xdata[0] + 3,50) #Fremskriver seneste situation med 3 dage
 
 y = sigmoid(fakex, *popt)
 yexp = expfunc(fakex,*poptexp)
@@ -194,15 +203,23 @@ save(p4)
 
 
 ## Percentages on ITA
+
+avg_days = 5
+avg_DK = np.average((ita[-avg_days:]/hosp[-avg_days:])*100)
+
 p5 = figure(title="Procenter vedr. indlagte - COVID19 - Danmark", tools='', background_fill_color="#fafafa")
 p5.add_layout(Title(text="Data kilde: Statens Serum Institut, JAMA", text_font_style="italic",text_font_size="8pt"), 'below')
 p5.add_layout(Title(text="Data fra kl:" + str(int(latest[-1][0])) + " " + str(int(latest[-2][0])) + "." + str(int(latest[-3][0])) + "." + str(int(latest[0][0])), text_font_style="italic",text_font_size="8pt"), 'above')
-p5.add_layout(Title(text="Visuel præsentation: bigb8.github.io/coviddanmark/ - refenceliste på adressen", text_font_style="italic",text_font_size="8pt"), 'below')
+p5.add_layout(Title(text="Visuel præsentation og gennemsnit: bigb8.github.io/coviddanmark/ - refenceliste på adressen", text_font_style="italic",text_font_size="8pt"), 'below')
 output_file('percent.html', title="Intensiv i procent DK")
 
+# p5.quad(top=(resp/hosp)*100, bottom=0, left=yearday, right=yearday+.35,fill_color=colorshex["resp"], line_color="white", alpha=1,legend_label="% af indlagte i respirator")
+
+
 p5.quad(top=(ita/hosp)*100, bottom=0, left=yearday -.35, right=yearday,fill_color=colorshex["ita"], line_color="white", alpha=1,legend_label="% af indlagte på intensiv")
-p5.line([yearday[0], yearday[-1]+1],[16,16],line_color="#ff8888", line_width=3, alpha=0.8, legend_label="% på intensiv, Italien, 7.3.2020")
-p5.quad(top=(resp/hosp)*100, bottom=0, left=yearday, right=yearday+.35,fill_color=colorshex["resp"], line_color="white", alpha=1,legend_label="% af indlagte i respirator")
+p5.line([yearday[0], yearday[-1]+1],[16,16],line_color="#3b73a8", line_width=3, alpha=0.8, legend_label="% på intensiv, Italien, 7.3.2020")
+p5.line([yearday[0], yearday[-1]+1],[avg_DK,avg_DK],line_color="#535955", line_width=3, alpha=0.8, legend_label="% på intensiv, Gns. DK, "+str(avg_days)+" dage")
+
 
 p5.xaxis.axis_label = 'Dato'
 p5.yaxis.axis_label = '%'
