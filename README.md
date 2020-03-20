@@ -13,9 +13,10 @@ Data findes tilgængeligt mange andre steder, men har samlet, og samler, det med
 <a href = "https://bigb8.github.io/coviddanmark/lib/percent.html" target="_blank">Procenter vedrørende indlagte</a>
 
 
-Regressionerne for nedenstående link repræsenterer kun eksisterende data, fremskrivning på basis af disse skal tages med alle forbehold.
+
 <a href = "https://bigb8.github.io/coviddanmark/lib/hosp.html" target="_blank">Antal indlagte</a>
 
+Regressionerne repræsenterer kun eksisterende data, fremskrivning på basis af disse skal tages med alle forbehold.
 
 
 
