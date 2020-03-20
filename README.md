@@ -11,9 +11,10 @@ Alt data, kode og og grafer, er udgivet under MIT licens. Så du kan frit benytt
 
 <a href = "https://bigb8.github.io/coviddanmark/lib/percent.html" target="_blank">Procenter vedrørende indlagte</a>
 
+
+Regressionerne for nedenstående link repræsenterer kun eksisterende data, fremskrivning på basis af disse skal tages med alle forbehold.
 <a href = "https://bigb8.github.io/coviddanmark/lib/hosp.html" target="_blank">Antal indlagte</a>
 
-Regressionerne repræsenterer kun eksisterende data, fremskrivning på basis af disse skal tages med alle forbehold.
 
 
 
@@ -22,6 +23,7 @@ Regressionerne repræsenterer kun eksisterende data, fremskrivning på basis af 
 
 <iframe src ="https://bigb8.github.io/coviddanmark/lib/percent.html" height="650" width="600"></iframe>
 
+Regressionerne repræsenterer kun eksisterende data, fremskrivning på basis af disse skal tages med alle forbehold.
 <iframe src ="https://bigb8.github.io/coviddanmark/lib/hosp.html" height="650" width="600"></iframe>
 
 
