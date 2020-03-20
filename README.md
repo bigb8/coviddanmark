@@ -20,13 +20,13 @@ Regressionerne repræsenterer kun eksisterende data, fremskrivning på basis af 
 
 
 
-<iframe src ="https://bigb8.github.io/coviddanmark/lib/stacked.html" height="650" width="600"></iframe>
+<iframe src ="https://bigb8.github.io/coviddanmark/lib/stacked.html" height="650" width="650"></iframe>
 
 
-<iframe src ="https://bigb8.github.io/coviddanmark/lib/percent.html" height="650" width="600"></iframe>
+<iframe src ="https://bigb8.github.io/coviddanmark/lib/percent.html" height="650" width="650"></iframe>
 
 Nedenstående regressioner repræsenterer kun eksisterende data, fremskrivning (stiplede linjer) på basis af disse skal tages med alle forbehold.
-<iframe src ="https://bigb8.github.io/coviddanmark/lib/hosp.html" height="650" width="600"></iframe>
+<iframe src ="https://bigb8.github.io/coviddanmark/lib/hosp.html" height="650" width="650"></iframe>
 
 
 
