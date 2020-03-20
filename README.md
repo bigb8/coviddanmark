@@ -2,9 +2,10 @@
 
 
 20.03.2020:
-Udover den dystre situation i Danmark, så blev jeg frusteret over at man ikke kunne få et grafisk overblik over COVID-19 situationen i Danmark. Jeg var nødt til at surfe rundt for at få overblik. Jeg samler data fra SST hver dag og opdaterer graferne.
 
-Alt <a href ="https://github.com/bigb8/coviddanmark/tree/master/data%20DK">data</a>, <a href="https://github.com/bigb8/coviddanmark/tree/master/lib">kode og og grafer</a>, er udgivet under MIT licens. Så du kan frit benytte det. Find det ved at vælge "View the Project on GitHub". Forslag til ændringer, og hjælp modtages gerne.  
+Udover at befinde sig i den dystre situation i Danmark pt, så blev jeg frusteret over at man ikke kunne få et grafisk overblik over COVID-19 situationen i Danmark. Jeg var nødt til at surfe rundt for at få overblik. Jeg samler data fra SST hver dag og opdaterer graferne.
+
+Alt <a href ="https://github.com/bigb8/coviddanmark/tree/master/data%20DK">data</a>, <a href="https://github.com/bigb8/coviddanmark/tree/master/lib">kode og og grafer</a>, er udgivet under MIT licens. Så du kan frit benytte det. Fx til undervisning i matematik eller biologi. Find det ved at vælge "View the Project on GitHub". Forslag til ændringer, og hjælp modtages gerne.  
 
 Data findes tilgængeligt mange andre steder, men har samlet, og samler, det med hensigten om at lave graferne der ses på denne side.
 
