@@ -5,7 +5,7 @@
 
 Udover at befinde sig i den dystre situation i Danmark pt, så blev jeg frusteret over at man ikke kunne få et grafisk overblik over COVID-19 situationen i Danmark. Jeg var nødt til at surfe rundt for at få overblik. Jeg samler data fra SST hver dag og opdaterer graferne.
 
-Alt <a href ="https://github.com/bigb8/coviddanmark/tree/master/data%20DK">data</a>, <a href="https://github.com/bigb8/coviddanmark/tree/master/lib">kode og og grafer</a>, er udgivet under MIT licens. Så du kan frit benytte det. Fx til undervisning i matematik eller biologi. Find det ved at vælge "View the Project on GitHub". Forslag til ændringer, og hjælp modtages gerne.  
+Alt <a href ="https://github.com/bigb8/coviddanmark/tree/master/data%20DK">data</a>, <a href="https://github.com/bigb8/coviddanmark/tree/master/lib">kode og og grafer</a>, er udgivet under MIT licens. Så du kan frit benytte det. Fx til undervisning i matematik eller biologi. Find det ved at vælge "View on GitHub". Forslag til ændringer, og hjælp modtages gerne.  
 
 Data findes tilgængeligt mange andre steder, men har samlet, og samler, det med hensigten om at lave graferne der ses på denne side.
 
@@ -17,7 +17,7 @@ Data findes tilgængeligt mange andre steder, men har samlet, og samler, det med
 
 <a href = "https://bigb8.github.io/coviddanmark/lib/hosp.html" target="_blank">Antal indlagte</a>
 
-Regressionerne repræsenterer kun eksisterende data, fremskrivning på basis af disse skal tages med alle forbehold.
+Regressionerne repræsenterer kun eksisterende data, fremskrivning på basis af disse bør ske med alle forbehold.
 
 
 
@@ -26,7 +26,7 @@ Regressionerne repræsenterer kun eksisterende data, fremskrivning på basis af 
 
 <iframe src ="https://bigb8.github.io/coviddanmark/lib/percent.html" height="650" width="650"></iframe>
 
-Nedenstående regressioner repræsenterer kun eksisterende data, fremskrivning (stiplede linjer) på basis af disse skal tages med alle forbehold.
+Nedenstående regressioner repræsenterer kun eksisterende data, fremskrivning (stiplede linjer) på basis af disse bør ske med alle forbehold.
 <iframe src ="https://bigb8.github.io/coviddanmark/lib/hosp.html" height="650" width="650"></iframe>
 
 
