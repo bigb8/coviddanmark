@@ -19,6 +19,16 @@ Regressionerne repræsenterer kun eksisterende data, fremskrivning på basis af 
 
 
 
+
+<iframe src ="https://bigb8.github.io/coviddanmark/lib/stacked.html" height="650" width="800"></iframe>
+
+
+<iframe src ="https://bigb8.github.io/coviddanmark/lib/resp.html" height="650" width="800"></iframe>
+
+<iframe src ="https://bigb8.github.io/coviddanmark/lib/hosp.html" height="650" width="800"></iframe>
+
+
+
 ### Referencer
 <a href = "https://www.sst.dk/da/Viden/Smitsomme-sygdomme/Smitsomme-sygdomme-A-AA/Coronavirus/Spoergsmaal-og-svar" target="_blank">SST</a>
 
