@@ -20,7 +20,7 @@ Regressionerne repræsenterer kun eksisterende data, fremskrivning på basis af 
 <iframe src ="https://bigb8.github.io/coviddanmark/lib/stacked.html" height="650" width="600"></iframe>
 
 
-<iframe src ="https://bigb8.github.io/coviddanmark/lib/resp.html" height="650" width="600"></iframe>
+<iframe src ="https://bigb8.github.io/coviddanmark/lib/percent.html" height="650" width="600"></iframe>
 
 <iframe src ="https://bigb8.github.io/coviddanmark/lib/hosp.html" height="650" width="600"></iframe>
 
