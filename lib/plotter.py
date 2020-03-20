@@ -147,7 +147,7 @@ yexp_forward = expfunc(fakex_forward,*poptexp)
 p1 = figure(title="Antal indlagte - COVID19 - Danmark", tools='', background_fill_color="#fafafa")
 p1.add_layout(Title(text="Data kilde: Statens Serum Institut", text_font_style="italic",text_font_size="8pt"), 'below')
 p1.add_layout(Title(text="Data fra kl:" + str(int(latest[-1][0])) + " " + str(int(latest[-2][0])) + "." + str(int(latest[-3][0])) + "." + str(int(latest[0][0])), text_font_style="italic",text_font_size="8pt"), 'above')
-p1.add_layout(Title(text="Visuel præsentation: coviddanmark.github.com - refenceliste på adressen", text_font_style="italic",text_font_size="8pt"), 'below')
+p1.add_layout(Title(text="Visuel præsentation: bigb8.github.io/coviddanmark/ - refenceliste på adressen", text_font_style="italic",text_font_size="8pt"), 'below')
 output_file('hosp.html', title="Indlagte DK")
 
 p1.quad(top=hosp, bottom=0, left=yearday -.2, right=yearday+.2,fill_color=colorshex["hosp"], line_color="white", alpha=1)
@@ -179,7 +179,7 @@ p4.quad(top=deaths, bottom=0, left=yearday +.10, right=yearday+.3,fill_color=col
 
 p4.add_layout(Title(text="Data kilde: Statens Serum Institut", text_font_style="italic",text_font_size="8pt"), 'below')
 p4.add_layout(Title(text="Data fra kl:" + str(int(latest[-1][0])) + " " + str(int(latest[-2][0])) + "." + str(int(latest[-3][0])) + "." + str(int(latest[0][0])), text_font_style="italic",text_font_size="8pt"), 'above')
-p4.add_layout(Title(text="Visuel præsentation: coviddanmark.github.com - refenceliste på adressen", text_font_style="italic",text_font_size="8pt"), 'below')
+p4.add_layout(Title(text="Visuel præsentation: bigb8.github.io/coviddanmark/ - refenceliste på adressen", text_font_style="italic",text_font_size="8pt"), 'below')
 
 
 p4.xaxis.axis_label = 'Dato'
@@ -195,7 +195,7 @@ save(p4)
 p5 = figure(title="Procenter vedr. indlagte - COVID19 - Danmark", tools='', background_fill_color="#fafafa")
 p5.add_layout(Title(text="Data kilde: Statens Serum Institut, JAMA", text_font_style="italic",text_font_size="8pt"), 'below')
 p5.add_layout(Title(text="Data fra kl:" + str(int(latest[-1][0])) + " " + str(int(latest[-2][0])) + "." + str(int(latest[-3][0])) + "." + str(int(latest[0][0])), text_font_style="italic",text_font_size="8pt"), 'above')
-p5.add_layout(Title(text="Visuel præsentation: coviddanmark.github.com - refenceliste på adressen", text_font_style="italic",text_font_size="8pt"), 'below')
+p5.add_layout(Title(text="Visuel præsentation: bigb8.github.io/coviddanmark/ - refenceliste på adressen", text_font_style="italic",text_font_size="8pt"), 'below')
 output_file('percent.html', title="Intensiv i procent DK")
 
 p5.quad(top=(ita/hosp)*100, bottom=0, left=yearday -.35, right=yearday,fill_color=colorshex["ita"], line_color="white", alpha=1,legend_label="% af indlagte på intensiv")
