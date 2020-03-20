@@ -38,4 +38,10 @@ Nedenstående regressioner repræsenterer kun eksisterende data, fremskrivning (
 
 
 
-<img src ="https://www.sst.dk/-/media/Viden/Smitsomme-sygdomme/Smitsomme-sygdomme-A-%C3%85/Bannere/Banner-forebyg-smitte.ashx?h=600&la=da&w=1000&hash=17A4B48D7D1979E43C2402C88A34C08B7FB1F2A2">Råd</img>
+<img src ="https://www.sst.dk/-/media/Viden/Smitsomme-sygdomme/Smitsomme-sygdomme-A-%C3%85/Bannere/Banner-forebyg-smitte.ashx?h=600&la=da&w=1000&hash=17A4B48D7D1979E43C2402C88A34C08B7FB1F2A2"/>
+
+Pas på jer selv og andre !
+
+Med venlig hilsen,
+Morten Bo Søndergaard Svendsen
+Civilingeniør, Ph.d.
