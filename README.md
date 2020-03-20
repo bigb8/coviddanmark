@@ -1,3 +1,6 @@
+
+
+
 # Grafer og data COVID19 Danmark
 
 
@@ -9,6 +12,9 @@ Alt <a href ="https://github.com/bigb8/coviddanmark/tree/master/data%20DK">data<
 
 Data findes tilgængeligt mange andre steder, men har samlet, og samler, det med hensigten om at lave graferne der ses på denne side.
 
+
+
+
 <a href = "https://bigb8.github.io/coviddanmark/lib/stacked.html" target="_blank">Oversigt</a>
 
 <a href = "https://bigb8.github.io/coviddanmark/lib/percent.html" target="_blank">Procenter vedrørende indlagte</a>
@@ -19,6 +25,8 @@ Data findes tilgængeligt mange andre steder, men har samlet, og samler, det med
 
 Regressionerne repræsenterer kun eksisterende data, fremskrivning på basis af disse bør ske med alle forbehold.
 
+
+<img src ="https://www.sst.dk/-/media/Viden/Smitsomme-sygdomme/Smitsomme-sygdomme-A-%C3%85/Bannere/Banner-forebyg-smitte.ashx?h=600&la=da&w=1000&hash=17A4B48D7D1979E43C2402C88A34C08B7FB1F2A2"/>
 
 
 <iframe src ="https://bigb8.github.io/coviddanmark/lib/stacked.html" height="650" width="650"></iframe>
@@ -43,5 +51,7 @@ Nedenstående regressioner repræsenterer kun eksisterende data, fremskrivning (
 Pas på jer selv og andre !
 
 Med venlig hilsen,
+
 Morten Bo Søndergaard Svendsen
+
 Civilingeniør, Ph.d.
