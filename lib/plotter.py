@@ -154,9 +154,10 @@ yexp_forward = expfunc(fakex_forward,*poptexp)
 
 #Graph with regressions
 p1 = figure(title="Antal indlagte - COVID19 - Danmark", tools='', background_fill_color="#fafafa")
-p1.add_layout(Title(text="Data kilde: Statens Serum Institut", text_font_style="italic",text_font_size="8pt"), 'below')
+p1.add_layout(Title(text="Data kilde: Sundhedsstyrelsen", text_font_style="italic",text_font_size="8pt"), 'below')
 p1.add_layout(Title(text= "Regressionerne (fit) repræsenterer kun eksisterende data, pas på ved fremskrivning. Data fra kl:" + str(int(latest[-1][0])) + " " + str(int(latest[-2][0])) + "." + str(int(latest[-3][0])) + "." + str(int(latest[0][0])), text_font_style="italic",text_font_size="8pt"), 'above')
 p1.add_layout(Title(text="Visuel præsentation: bigb8.github.io/coviddanmark/ - refenceliste på adressen", text_font_style="italic",text_font_size="8pt"), 'below')
+
 output_file('hosp.html', title="Indlagte DK")
 
 p1.quad(top=hosp, bottom=0, left=yearday -.2, right=yearday+.2,fill_color=colorshex["hosp"], line_color="white", alpha=1)
@@ -180,18 +181,15 @@ save(p1)
 ##Summary plot of hospitalized
 p4 = figure(title="Oversigt indlagte - COVID19 - Danmark", tools='', background_fill_color="#fafafa")
 output_file('stacked.html', title="Oversigt DK")
+
 p4.quad(top=hosp, bottom=0, left=yearday -.4, right=yearday+.1,fill_color=colorshex["hosp"], line_color="white", alpha=1,legend_label="Indlagt")
 p4.quad(top=ita, bottom=0, left=yearday -.2, right=yearday+.1,fill_color=colorshex["ita"], line_color="white", alpha=1,legend_label="på intensiv")
 p4.quad(top=resp, bottom=0, left=yearday -.10, right=yearday+.1,fill_color=colorshex["resp"], line_color="white", alpha=1,legend_label="i respirator")
 p4.quad(top=deaths, bottom=0, left=yearday +.10, right=yearday+.3,fill_color=colorshex["deaths"], line_color="white", alpha=1,legend_label="Død - akkumuleret")
 
-
-p4.add_layout(Title(text="Data kilde: Statens Serum Institut", text_font_style="italic",text_font_size="8pt"), 'below')
+p4.add_layout(Title(text="Data kilde: Sundhedsstyrelsen", text_font_style="italic",text_font_size="8pt"), 'below')
 p4.add_layout(Title(text="Data fra kl:" + str(int(latest[-1][0])) + " " + str(int(latest[-2][0])) + "." + str(int(latest[-3][0])) + "." + str(int(latest[0][0])) , text_font_style="italic",text_font_size="8pt"), 'above')
 p4.add_layout(Title(text="Visuel præsentation: bigb8.github.io/coviddanmark/ - refenceliste på adressen", text_font_style="italic",text_font_size="8pt"), 'below')
-# p4.add_layout(Title(text=, text_font_style="italic",text_font_size="8pt"), 'above')
-
-
 
 p4.xaxis.axis_label = 'Dato'
 p4.yaxis.axis_label = 'Antal'
@@ -208,13 +206,12 @@ avg_days = 5
 avg_DK = np.average((ita[-avg_days:]/hosp[-avg_days:])*100)
 
 p5 = figure(title="Procenter vedr. indlagte - COVID19 - Danmark", tools='', background_fill_color="#fafafa")
-p5.add_layout(Title(text="Data kilde: Statens Serum Institut, JAMA", text_font_style="italic",text_font_size="8pt"), 'below')
+p5.add_layout(Title(text="Data kilde: Sundhedsstyrelsen, JAMA", text_font_style="italic",text_font_size="8pt"), 'below')
 p5.add_layout(Title(text="Data fra kl:" + str(int(latest[-1][0])) + " " + str(int(latest[-2][0])) + "." + str(int(latest[-3][0])) + "." + str(int(latest[0][0])), text_font_style="italic",text_font_size="8pt"), 'above')
 p5.add_layout(Title(text="Visuel præsentation og gennemsnit: bigb8.github.io/coviddanmark/ - refenceliste på adressen", text_font_style="italic",text_font_size="8pt"), 'below')
 output_file('percent.html', title="Intensiv i procent DK")
 
 # p5.quad(top=(resp/hosp)*100, bottom=0, left=yearday, right=yearday+.35,fill_color=colorshex["resp"], line_color="white", alpha=1,legend_label="% af indlagte i respirator")
-
 
 p5.quad(top=(ita/hosp)*100, bottom=0, left=yearday -.35, right=yearday,fill_color=colorshex["ita"], line_color="white", alpha=1,legend_label="% af indlagte på intensiv")
 p5.line([yearday[0], yearday[-1]+1],[16,16],line_color="#3b73a8", line_width=3, alpha=0.8, legend_label="% på intensiv, Italien, 7.3.2020")
