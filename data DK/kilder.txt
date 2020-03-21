@@ -2,3 +2,4 @@ sst;https://www.sst.dk/da/Viden/Smitsomme-sygdomme/Smitsomme-sygdomme-A-AA/Coron
 btlive;https://www.bt.dk/udland/live-danmark-lukker-ned;
 wiki_covid_dk;https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_Denmark;
 JAMAITALY;https://doi.org/10.1001/jama.2020.4031;
+sst2;https://www.sst.dk/da/Viden/Smitsomme-sygdomme/Smitsomme-sygdomme-A-AA/Coronavirus/Spoergsmaal-og-svar/Overvaagningsdata;
