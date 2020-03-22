@@ -140,9 +140,9 @@ except RuntimeError:
     poptexp = popt[2:]
 
 
-
+daysforward = 2
 fakex = np.linspace(0,np.max(xdata) - xdata[0] - 1,150) #week 1. 16.3.2020.
-fakex_forward = np.linspace(np.max(xdata) - xdata[0] -1,np.max(xdata) - xdata[0] + 3,50) #Fremskriver seneste situation med 3 dage
+fakex_forward = np.linspace(np.max(xdata) - xdata[0] -1,np.max(xdata) - xdata[0] + daysforward,50) #Fremskriver seneste situation med 3 dage
 
 y = sigmoid(fakex, *popt)
 yexp = expfunc(fakex,*poptexp)
@@ -150,6 +150,7 @@ yexp = expfunc(fakex,*poptexp)
 y_forward = sigmoid(fakex_forward, *popt)
 yexp_forward = expfunc(fakex_forward,*poptexp)
 
+midway = (y_forward + yexp_forward)*.5
 
 
 #Graph with regressions
@@ -161,16 +162,17 @@ p1.add_layout(Title(text="Visuel præsentation: bigb8.github.io/coviddanmark/ - 
 output_file('hosp.html', title="Indlagte DK")
 
 p1.quad(top=hosp, bottom=0, left=yearday -.2, right=yearday+.2,fill_color=colorshex["hosp"], line_color="white", alpha=1)
-p1.line(fakex+yearday[0],y,line_color="#59c25d", line_width=4, alpha=0.8, legend_label="Sigmoid fit")
-p1.line(fakex+yearday[0],yexp,line_color="#ff8888", line_width=4, alpha=0.8, legend_label="Exponentielt fit")
-p1.line(fakex_forward+yearday[0],y_forward,line_color="#59c25d", line_width=4, alpha=0.4,line_dash=[2,2], legend_label="Sigmoid fit")
-p1.line(fakex_forward+yearday[0],yexp_forward,line_color="#ff8888", line_width=4, alpha=0.4,line_dash=[2,2], legend_label="Exponentielt fit")
+p1.line(fakex+yearday[0],y,line_color="#59c25d", line_width=4, alpha=0.8, legend_label="Sigmoid regression")
+p1.line(fakex+yearday[0],yexp,line_color="#ff8888", line_width=4, alpha=0.8, legend_label="Exponentielt regression")
+p1.line(fakex_forward+yearday[0],y_forward,line_color="#59c25d", line_width=4, alpha=0.4,line_dash=[2,2], legend_label="Sigmoid regression")
+p1.line(fakex_forward+yearday[0],yexp_forward,line_color="#ff8888", line_width=4, alpha=0.4,line_dash=[2,2], legend_label="Exponentielt regression")
+p1.line(fakex_forward+yearday[0],midway,line_color="#696969", line_width=4, alpha=0.4,line_dash=[2,2], legend_label="Gennemsnit af regressioner")
 
 
 p1.xaxis.axis_label = 'Dato'
 p1.yaxis.axis_label = 'Antal'
 p1.xaxis.ticker =  SingleIntervalTicker(interval=dayinterval, num_minor_ticks=dayinterval)
-p1.y_range=Range1d(0, np.max(y)+50)
+p1.y_range=Range1d(0, np.max(yexp_forward)+50)
 p1.legend.location = 'top_left'
 p1.xaxis.major_label_overrides =tickdict
 save(p1)
