@@ -213,7 +213,7 @@ output_file('percent.html', title="Intensiv i procent DK")
 
 p5.quad(top=(ita/hosp)*100, bottom=0, left=yearday -.35, right=yearday,fill_color=colorshex["ita"], line_color="white", alpha=1,legend_label="% af indlagte på intensiv")
 p5.line([yearday[0], yearday[-1]+1],[16,16],line_color="#3b73a8", line_width=3, alpha=0.8, legend_label="% på intensiv, Italien, 7.3.2020")
-p5.line([yearday[0], yearday[-1]+1],[avg_DK,avg_DK],line_color="#535955", line_width=3, alpha=0.8, legend_label="% på intensiv, Gns. DK, "+str(avg_days)+" dage")
+p5.line([yearday[-5], yearday[-1]+1],[avg_DK,avg_DK],line_color="#535955", line_width=3, alpha=0.8, legend_label="% på intensiv, Gns. DK, "+str(avg_days)+" dage")
 
 
 p5.xaxis.axis_label = 'Dato'
