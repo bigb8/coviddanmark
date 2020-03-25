@@ -11,10 +11,6 @@ from bokeh.layouts import gridplot
 from bokeh.plotting import figure, output_file, show,save
 from bokeh.models import SingleIntervalTicker, LinearAxis,Range1d,Title
 
-
-
-
-
 #Path to lib folder
 libpath = os.path.realpath(__file__).split("plotter.")[0] + os.sep
 
