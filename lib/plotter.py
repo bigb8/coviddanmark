@@ -159,9 +159,9 @@ output_file('hosp.html', title="Indlagte DK")
 
 p1.quad(top=hosp, bottom=0, left=yearday -.2, right=yearday+.2,fill_color=colorshex["hosp"], line_color="white", alpha=1)
 p1.line(fakex+yearday[0],y,line_color="#59c25d", line_width=4, alpha=0.8, legend_label="Sigmoid regression")
-p1.line(fakex+yearday[0],yexp,line_color="#ff8888", line_width=4, alpha=0.8, legend_label="Exponentielt regression")
+p1.line(fakex+yearday[0],yexp,line_color="#ff8888", line_width=4, alpha=0.8, legend_label="Exponentiel regression")
 p1.line(fakex_forward+yearday[0],y_forward,line_color="#59c25d", line_width=4, alpha=0.4,line_dash=[2,2], legend_label="Sigmoid regression")
-p1.line(fakex_forward+yearday[0],yexp_forward,line_color="#ff8888", line_width=4, alpha=0.4,line_dash=[2,2], legend_label="Exponentielt regression")
+p1.line(fakex_forward+yearday[0],yexp_forward,line_color="#ff8888", line_width=4, alpha=0.4,line_dash=[2,2], legend_label="Exponentiel regression")
 p1.line(fakex_forward+yearday[0],midway,line_color="#696969", line_width=4, alpha=0.4,line_dash=[2,2], legend_label="Gennemsnit af regressioner")
 
 
