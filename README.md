@@ -23,6 +23,9 @@ Data findes tilgængeligt mange andre steder, men har samlet, og samler, det med
 
 <a href = "https://bigb8.github.io/coviddanmark/lib/hosp.html" target="_blank">Antal indlagte</a>
 
+
+<a href = "https://bigb8.github.io/coviddanmark/lib/delta_1.html" target="_blank">Ændring per dag - antal</a>
+
 Regressionerne repræsenterer kun eksisterende data, fremskrivning på basis af disse bør ske med alle forbehold.
 
 
@@ -33,6 +36,13 @@ Regressionerne repræsenterer kun eksisterende data, fremskrivning på basis af 
 
 
 <iframe src ="https://bigb8.github.io/coviddanmark/lib/percent.html" height="650" width="650"></iframe>
+
+
+
+Ændring
+<iframe src ="https://bigb8.github.io/coviddanmark/lib/delta_1.html" height="650" width="650"></iframe>
+
+
 
 Nedenstående regressioner repræsenterer kun eksisterende data, fremskrivning (stiplede linjer) på basis af disse bør ske med alle forbehold.
 <iframe src ="https://bigb8.github.io/coviddanmark/lib/hosp.html" height="650" width="650"></iframe>
