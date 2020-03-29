@@ -17,7 +17,9 @@ Data findes tilgængeligt mange andre steder, men har samlet, og samler, det med
 
 <a href = "https://bigb8.github.io/coviddanmark/lib/stacked.html" target="_blank">Oversigt</a>
 
-<a href = "https://bigb8.github.io/coviddanmark/lib/percent.html" target="_blank">Procenter vedrørende indlagte</a>
+<a href = "https://bigb8.github.io/coviddanmark/lib/percent.html" target="_blank">Procent indlagte på intensiv</a>
+
+<a href = "https://bigb8.github.io/coviddanmark/lib/percent_ri.html" target="_blank">Procent af indlagte på intensiv i respirator</a>
 
 
 
