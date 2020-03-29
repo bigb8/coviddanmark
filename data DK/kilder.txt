@@ -4,3 +4,4 @@ wiki_covid_dk;https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_Denmark
 JAMAITALY;https://doi.org/10.1001/jama.2020.4031;
 sst2;https://www.sst.dk/da/Viden/Smitsomme-sygdomme/Smitsomme-sygdomme-A-AA/Coronavirus/Spoergsmaal-og-svar/Overvaagningsdata;
 sst3;https://www.sst.dk/da/corona/tal-og-overvaagning;
+sst_rap;https://www.sst.dk/-/media/Nyheder/2020/ITA_COVID_19_220320.ashx?la=da&hash=633349284353F4D8559B231CDA64169D327F1227;

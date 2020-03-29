@@ -204,8 +204,11 @@ save(p4)
 
 avg_days = 5
 avg_DK = np.average((ita[-avg_days:]/hosp[-avg_days:])*100)
+avg_DK_ri = np.average((resp[-avg_days:]/ita[-avg_days:])*100)
 
-p5 = figure(title="Procenter vedr. indlagte - COVID19 - Danmark", tools='', background_fill_color="#fafafa")
+
+
+p5 = figure(title="Procent indlagte på intensiv - COVID19 - Danmark", tools='', background_fill_color="#fafafa")
 p5.add_layout(Title(text="Data kilde: Sundhedsstyrelsen, JAMA", text_font_style="italic",text_font_size="8pt"), 'below')
 p5.add_layout(Title(text="Data fra kl:" + str(int(latest[-1][0])) + " " + str(int(latest[-2][0])) + "." + str(int(latest[-3][0])) + "." + str(int(latest[0][0])), text_font_style="italic",text_font_size="8pt"), 'above')
 p5.add_layout(Title(text="Visuel præsentation og gennemsnit: bigb8.github.io/coviddanmark/ - refenceliste på adressen", text_font_style="italic",text_font_size="8pt"), 'below')
@@ -217,15 +220,45 @@ p5.quad(top=(ita/hosp)*100, bottom=0, left=yearday -.35, right=yearday,fill_colo
 p5.line([yearday[0], yearday[-1]+1],[16,16],line_color="#3b73a8", line_width=3, alpha=0.8, legend_label="% på intensiv, Italien, 7.3.2020")
 p5.line([yearday[-5], yearday[-1]+1],[avg_DK,avg_DK],line_color="#535955", line_width=3, alpha=0.8, legend_label="% på intensiv, Gns. DK, "+str(avg_days)+" dage")
 
-
 p5.xaxis.axis_label = 'Dato'
 p5.yaxis.axis_label = '%'
-p5.xaxis.ticker =  SingleIntervalTicker(interval=dayinterval, num_minor_ticks=dayinterval)
+p5.xaxis.ticker =  SingleIntervalTicker(interval=dayinterval+5, num_minor_ticks=dayinterval+5)
 p5.yaxis.ticker =  SingleIntervalTicker(interval=5, num_minor_ticks=5)
 p5.y_range=Range1d(0, 30)
 p5.legend.location = 'top_left'
 p5.xaxis.major_label_overrides =tickdict
+
 save(p5)
+
+
+p5_ri = figure(title="Procent på intensiv i respirator - COVID19 - Danmark", tools='', background_fill_color="#fafafa")
+p5_ri.quad(top=(resp[7:]/ita[7:])*100, bottom=0, left=yearday[7:] -.35, right=yearday[7:],fill_color=colorshex["ita"], line_color="white", alpha=1,legend_label="% af indlagte på intensiv")
+p5_ri.line([yearday[7], yearday[-1]+1],[80,80],line_color="#3b73a8", line_width=3, alpha=0.8, legend_label="% SST antagelse 22.03.2020")
+p5_ri.line([yearday[-5], yearday[-1]+1],[avg_DK_ri,avg_DK_ri],line_color="#535955", line_width=3, alpha=0.8, legend_label="%, Gns. DK, "+str(avg_days)+" dage")
+
+p5_ri.add_layout(Title(text="Data kilde: Sundhedsstyrelsen", text_font_style="italic",text_font_size="8pt"), 'below')
+p5_ri.add_layout(Title(text="Data fra kl:" + str(int(latest[-1][0])) + " " + str(int(latest[-2][0])) + "." + str(int(latest[-3][0])) + "." + str(int(latest[0][0])), text_font_style="italic",text_font_size="8pt"), 'above')
+p5_ri.add_layout(Title(text="Visuel præsentation og gennemsnit: bigb8.github.io/coviddanmark/ - refenceliste på adressen", text_font_style="italic",text_font_size="8pt"), 'below')
+
+
+
+p5_ri.xaxis.axis_label = 'Dato'
+p5_ri.yaxis.axis_label = '%'
+p5_ri.xaxis.ticker =  SingleIntervalTicker(interval=dayinterval+5, num_minor_ticks=dayinterval+5)
+p5_ri.yaxis.ticker =  SingleIntervalTicker(interval=5, num_minor_ticks=5)
+p5_ri.y_range=Range1d(0,100)
+p5_ri.legend.location = 'bottom_left'
+p5_ri.xaxis.major_label_overrides =tickdict
+output_file('percent_ri.html', title="Respirator på ITA i procent DK")
+save(p5_ri)
+
+
+# p = gridplot([[p5], [p5_ri]],plot_width=600, plot_height=800)
+
+
+
+
+
 
 
 
