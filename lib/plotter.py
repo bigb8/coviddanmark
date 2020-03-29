@@ -10,6 +10,8 @@ from scipy.optimize import curve_fit
 from bokeh.layouts import gridplot
 from bokeh.plotting import figure, output_file, show,save
 from bokeh.models import SingleIntervalTicker, LinearAxis,Range1d,Title
+from bokeh.layouts import gridplot
+
 
 #Path to lib folder
 libpath = os.path.realpath(__file__).split("plotter.")[0] + os.sep
@@ -224,3 +226,72 @@ p5.y_range=Range1d(0, 30)
 p5.legend.location = 'top_left'
 p5.xaxis.major_label_overrides =tickdict
 save(p5)
+
+
+
+
+
+
+
+
+
+##Summary plot of hospitalized
+p51 = figure(title="Oversigt ændring indlagte - COVID19 - Danmark", tools='', background_fill_color="#fafafa")
+p52 = figure(title="Oversigt ændring intenstiv indlagte - COVID19 - Danmark", tools='', background_fill_color="#fafafa")
+p53 = figure(title="Oversigt ændring intensiv + respirator - COVID19 - Danmark", tools='', background_fill_color="#fafafa")
+p54 = figure(title="Oversigt ændring døde - COVID19 - Danmark", tools='', background_fill_color="#fafafa")
+
+
+output_file('delta_1.html', title="Oversigt DK")
+
+p51.quad(top=np.diff(hosp), bottom=0, left=yearday -.4, right=yearday+.1,fill_color=colorshex["hosp"], line_color="white", alpha=1,legend_label="Indlagt")
+
+p51.add_layout(Title(text="Data kilde: Sundhedsstyrelsen", text_font_style="italic",text_font_size="8pt"), 'below')
+p51.add_layout(Title(text="Data fra kl:" + str(int(latest[-1][0])) + " " + str(int(latest[-2][0])) + "." + str(int(latest[-3][0])) + "." + str(int(latest[0][0])) , text_font_style="italic",text_font_size="8pt"), 'above')
+p51.add_layout(Title(text="Visuel præsentation og beregning: bigb8.github.io/coviddanmark/ - refenceliste på adressen", text_font_style="italic",text_font_size="8pt"), 'below')
+
+p51.xaxis.axis_label = 'Dato'
+p51.yaxis.axis_label = 'Antal'
+p51.xaxis.ticker =  SingleIntervalTicker(interval=dayinterval+5, num_minor_ticks=dayinterval+5)
+p51.y_range=Range1d(0, np.diff(hosp).max()+5)
+p51.legend.location = 'top_left'
+p51.xaxis.major_label_overrides =tickdict
+
+
+
+
+p52.quad(top=np.diff(ita), bottom=0, left=yearday -.2, right=yearday+.1,fill_color=colorshex["ita"], line_color="white", alpha=1,legend_label="på intensiv")
+
+p52.xaxis.axis_label = 'Dato'
+p52.yaxis.axis_label = 'Antal'
+p52.xaxis.ticker =  SingleIntervalTicker(interval=dayinterval+5, num_minor_ticks=dayinterval+5)
+p52.y_range=Range1d(0, np.diff(ita).max()+5)
+p52.legend.location = 'top_left'
+p52.xaxis.major_label_overrides =tickdict
+
+
+p53.quad(top=np.diff(resp), bottom=0, left=yearday -.10, right=yearday+.1,fill_color=colorshex["resp"], line_color="white", alpha=1,legend_label="i respirator")
+
+p53.xaxis.axis_label = 'Dato'
+p53.yaxis.axis_label = 'Antal'
+p53.xaxis.ticker =  SingleIntervalTicker(interval=dayinterval+5, num_minor_ticks=dayinterval+5)
+p53.y_range=Range1d(0, np.diff(resp).max()+5)
+p53.legend.location = 'top_left'
+p53.xaxis.major_label_overrides =tickdict
+
+
+
+p54.quad(top=np.diff(deaths), bottom=0, left=yearday +.10, right=yearday+.3,fill_color=colorshex["deaths"], line_color="white", alpha=1,legend_label="døde")
+
+p54.xaxis.axis_label = 'Dato'
+p54.yaxis.axis_label = 'Antal'
+p54.xaxis.ticker =  SingleIntervalTicker(interval=dayinterval+5, num_minor_ticks=dayinterval+5)
+p54.y_range=Range1d(0, np.diff(deaths).max()+5)
+p54.legend.location = 'top_left'
+p54.xaxis.major_label_overrides =tickdict
+
+
+p = gridplot([[p51, p52], [p53, p54]],plot_width=400, plot_height=250)
+
+
+save(p)
