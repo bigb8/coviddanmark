@@ -240,8 +240,6 @@ p5_ri.add_layout(Title(text="Data kilde: Sundhedsstyrelsen", text_font_style="it
 p5_ri.add_layout(Title(text="Data fra kl:" + str(int(latest[-1][0])) + " " + str(int(latest[-2][0])) + "." + str(int(latest[-3][0])) + "." + str(int(latest[0][0])), text_font_style="italic",text_font_size="8pt"), 'above')
 p5_ri.add_layout(Title(text="Visuel præsentation og gennemsnit: bigb8.github.io/coviddanmark/ - refenceliste på adressen", text_font_style="italic",text_font_size="8pt"), 'below')
 
-
-
 p5_ri.xaxis.axis_label = 'Dato'
 p5_ri.yaxis.axis_label = '%'
 p5_ri.xaxis.ticker =  SingleIntervalTicker(interval=dayinterval+5, num_minor_ticks=dayinterval+5)
