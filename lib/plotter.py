@@ -107,7 +107,7 @@ maxy = np.max(hosp) + 25
 ## Creating x-axis.
 
 tickdict = {72:"12.3", 74:"14.3"} # Dict for displaying dates instead of days. Hardcoded some dates from beginning
-dayinterval = 1 # Interval between dates shown
+dayinterval = 3 # Interval between dates shown
 
 
 for i,dd in enumerate(dater):
@@ -216,7 +216,7 @@ output_file('percent.html', title="Intensiv i procent DK")
 
 # p5.quad(top=(resp/hosp)*100, bottom=0, left=yearday, right=yearday+.35,fill_color=colorshex["resp"], line_color="white", alpha=1,legend_label="% af indlagte i respirator")
 
-p5.quad(top=(ita/hosp)*100, bottom=0, left=yearday -.35, right=yearday,fill_color=colorshex["ita"], line_color="white", alpha=1,legend_label="% af indlagte på intensiv")
+p5.quad(top=(ita/hosp)*100, bottom=0, left=yearday -.2, right=yearday+.2,fill_color=colorshex["ita"], line_color="white", alpha=1,legend_label="% af indlagte på intensiv")
 p5.line([yearday[0], yearday[-1]+1],[16,16],line_color="#3b73a8", line_width=3, alpha=0.8, legend_label="% på intensiv, Italien, 7.3.2020")
 p5.line([yearday[-5], yearday[-1]+1],[avg_DK,avg_DK],line_color="#535955", line_width=3, alpha=0.8, legend_label="% på intensiv, Gns. DK, "+str(avg_days)+" dage")
 
@@ -232,7 +232,7 @@ save(p5)
 
 
 p5_ri = figure(title="Procent på intensiv i respirator - COVID19 - Danmark", tools='', background_fill_color="#fafafa")
-p5_ri.quad(top=(resp[7:]/ita[7:])*100, bottom=0, left=yearday[7:] -.35, right=yearday[7:],fill_color=colorshex["ita"], line_color="white", alpha=1,legend_label="% af indlagte på intensiv")
+p5_ri.quad(top=(resp[7:]/ita[7:])*100, bottom=0, left=yearday[7:] -.2, right=yearday[7:]+.2,fill_color=colorshex["ita"], line_color="white", alpha=1,legend_label="% af indlagte på intensiv")
 p5_ri.line([yearday[7], yearday[-1]+1],[80,80],line_color="#3b73a8", line_width=3, alpha=0.8, legend_label="% SST antagelse 22.03.2020")
 p5_ri.line([yearday[-5], yearday[-1]+1],[avg_DK_ri,avg_DK_ri],line_color="#535955", line_width=3, alpha=0.8, legend_label="%, Gns. DK, "+str(avg_days)+" dage")
 
