@@ -135,8 +135,11 @@ try:
     poptexp, pcovexp = curve_fit(expfunc, xdata[:-1], ydata[:-1],p0=[1,1,1],method='dogbox', maxfev=5000)
     print("EXP SUCCES",poptexp,pcovexp)
 except RuntimeError:
-    poptexp = popt[2:]
+    poptexp = popt[1:]
 
+#If exponents zero use the sigmoid exp part
+if pcovexp[0][0] == 0:
+    poptexp = popt[1:]
 
 daysforward = 2
 fakex = np.linspace(0,np.max(xdata) - xdata[0] - 1,150) #week 1. 16.3.2020.
@@ -161,16 +164,16 @@ output_file('hosp.html', title="Indlagte DK")
 
 p1.quad(top=hosp, bottom=0, left=yearday -.2, right=yearday+.2,fill_color=colorshex["hosp"], line_color="white", alpha=1)
 p1.line(fakex+yearday[0],y,line_color="#59c25d", line_width=4, alpha=0.8, legend_label="Sigmoid regression")
-p1.line(fakex+yearday[0],yexp,line_color="#ff8888", line_width=4, alpha=0.8, legend_label="Exponentiel regression")
+# p1.line(fakex+yearday[0],yexp,line_color="#ff8888", line_width=4, alpha=0.8, legend_label="Exponentiel regression")
 p1.line(fakex_forward+yearday[0],y_forward,line_color="#59c25d", line_width=4, alpha=0.4,line_dash=[2,2], legend_label="Sigmoid regression")
-p1.line(fakex_forward+yearday[0],yexp_forward,line_color="#ff8888", line_width=4, alpha=0.4,line_dash=[2,2], legend_label="Exponentiel regression")
-p1.line(fakex_forward+yearday[0],midway,line_color="#696969", line_width=4, alpha=0.4,line_dash=[2,2], legend_label="Gennemsnit af regressioner")
+# p1.line(fakex_forward+yearday[0],yexp_forward,line_color="#ff8888", line_width=4, alpha=0.4,line_dash=[2,2], legend_label="Exponentiel regression")
+# p1.line(fakex_forward+yearday[0],midway,line_color="#696969", line_width=4, alpha=0.4,line_dash=[2,2], legend_label="Gennemsnit af regressioner")
 
 
 p1.xaxis.axis_label = 'Dato'
 p1.yaxis.axis_label = 'Antal'
 p1.xaxis.ticker =  SingleIntervalTicker(interval=dayinterval, num_minor_ticks=dayinterval)
-p1.y_range=Range1d(0, np.max(yexp_forward)+50)
+p1.y_range=Range1d(0, np.max(hosp)+125)
 p1.legend.location = 'top_left'
 p1.xaxis.major_label_overrides =tickdict
 save(p1)
