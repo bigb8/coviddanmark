@@ -287,7 +287,7 @@ p51.add_layout(Title(text="Visuel præsentation og beregning: bigb8.github.io/co
 p51.xaxis.axis_label = 'Dato'
 p51.yaxis.axis_label = 'Antal'
 p51.xaxis.ticker =  SingleIntervalTicker(interval=dayinterval+5, num_minor_ticks=dayinterval+5)
-p51.y_range=Range1d(np.diff(ita).min()-5, np.diff(hosp).max()+5)
+p51.y_range=Range1d(np.diff(hosp).min()-5, np.diff(hosp).max()+5)
 p51.legend.location = 'top_left'
 p51.xaxis.major_label_overrides =tickdict
 
@@ -309,7 +309,7 @@ p53.quad(top=np.diff(resp), bottom=0, left=yearday -.10, right=yearday+.1,fill_c
 p53.xaxis.axis_label = 'Dato'
 p53.yaxis.axis_label = 'Antal'
 p53.xaxis.ticker =  SingleIntervalTicker(interval=dayinterval+5, num_minor_ticks=dayinterval+5)
-p53.y_range=Range1d(np.diff(ita).min()-5, np.diff(resp).max()+5)
+p53.y_range=Range1d(np.diff(resp).min()-5, np.diff(resp).max()+5)
 p53.legend.location = 'top_left'
 p53.xaxis.major_label_overrides =tickdict
 
@@ -320,7 +320,7 @@ p54.quad(top=np.diff(deaths), bottom=0, left=yearday +.10, right=yearday+.3,fill
 p54.xaxis.axis_label = 'Dato'
 p54.yaxis.axis_label = 'Antal'
 p54.xaxis.ticker =  SingleIntervalTicker(interval=dayinterval+5, num_minor_ticks=dayinterval+5)
-p54.y_range=Range1d(np.diff(ita).min()-5, np.diff(deaths).max()+5)
+p54.y_range=Range1d(0, np.diff(deaths).max()+5)
 p54.legend.location = 'top_left'
 p54.xaxis.major_label_overrides =tickdict
 
